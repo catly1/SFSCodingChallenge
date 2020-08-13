@@ -11,7 +11,7 @@ function BalanceDetail(props) {
             balanace: balance
         }
 
-        update(bank);
+        // update(bank);
     }
 
     if (editing) {
