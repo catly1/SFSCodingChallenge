@@ -2,7 +2,7 @@ table {
   border-collapse: collapse;
 }
 
-table, th, td {
+th,td {
   border: 1px solid black;
 }
 
@@ -40,5 +40,9 @@ td {
 
 .countRow div {
   margin-right: 20px;
+}
+
+.allBox, .rowBox{
+  border: 0;
 }
 

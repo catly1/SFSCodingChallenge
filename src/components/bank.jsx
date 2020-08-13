@@ -31,7 +31,7 @@ function Bank(props){
         return(
             <tr id={ids} className="bankRow">
 
-                <td><input type="checkbox" className="bankCheckbox"></input></td>
+                <td className="rowBox"><input type="checkbox" className="bankCheckbox"></input></td>
                 <td>{creditor}</td>
                 <td>{firstName}</td>
                 <td>{lastName}</td>
@@ -42,7 +42,7 @@ function Bank(props){
     } else {
         return(
             <tr id={ids} className="bankRow">
-                <td><input type="checkbox" className="bankCheckbox"></input></td>
+                <td className="rowBox"><input type="checkbox" className="bankCheckbox"></input></td>
                 <CreditorDetail props={ids}/>
                 <FirstNameDetail props={ids}/>
                 <LastNameDetail props={ids}/>

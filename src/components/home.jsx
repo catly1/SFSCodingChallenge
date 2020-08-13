@@ -28,10 +28,10 @@ function Home(props){
 
     const renderBanks = () => {
         return(
-            <table id="table" onClick={updateTotal}>
+            <table id="table" onClick={updateTotal} >
                 <tbody>
                 <tr id="columnName">
-                    <th><input type="checkbox" name="all" onChange={handleAllCheckBoxes} /></th>
+                    <th className="allBox"><input type="checkbox" name="all" onChange={handleAllCheckBoxes} /></th>
                     <th>
                         Creditor
                     </th>
