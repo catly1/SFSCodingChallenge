@@ -6,7 +6,6 @@ function Home(props){
     const [banks, setBanks] = React.useState([]);
     const [checkRowCount, setCheckRowCount] = React.useState(0);
     const [total, setTotal] = React.useState(0);
-    const [tempEntries, setTempEntries] = React.useState({});
     const [newId, setNewId] = React.useState(0);
 
     React.useEffect(() => {
@@ -91,7 +90,7 @@ function Home(props){
     const updateTotal = () =>{
         const table = document.getElementById("table");
         let checkCount = 0;
-        let tempTotal = 0;
+        let tempTotal = 0.0;
         for (let i = 1; i < table.rows.length; i++) {
             let row = table.rows[i]
             let checked = row.cells[0].children[0].checked;
@@ -99,12 +98,11 @@ function Home(props){
                 checkCount += 1;
                 let num = parseFloat(row.cells[5].innerText);
                 if (num) tempTotal += num;
-                // console.log(row.cells[5].innerText)
             }
         }
 
         setCheckRowCount(checkCount);
-        setTotal(tempTotal)
+        setTotal(tempTotal.toFixed(2))
     }
 
 
