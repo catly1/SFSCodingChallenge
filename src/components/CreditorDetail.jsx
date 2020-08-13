@@ -4,8 +4,6 @@ function CreditorDetail(props){
     const [editing, setEditing] = React.useState(true);
     const [creditor, setCreditor] = React.useState("");
 
-    
-
     if (editing){
         return <td>
             <input

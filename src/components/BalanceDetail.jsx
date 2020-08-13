@@ -1,10 +1,18 @@
 import React from 'react';
+import {update} from '../util/bank_api';
 
 function BalanceDetail(props) {
     const [editing, setEditing] = React.useState(true);
     const [balance, setBalance] = React.useState("");
 
-    
+    const handleUpdate = () => {
+        let bank = {
+            id: props.props.id,
+            balanace: balance
+        }
+
+        update(bank);
+    }
 
     if (editing) {
         return <td>
@@ -12,10 +20,11 @@ function BalanceDetail(props) {
                 value={balance}
                 type="number"
                 onChange={e => {
-                    setBalance(e.target.value)
+                    setBalance(e.target.value);
                 }}
                 onBlur={e => {
-                    setEditing(false)
+                    handleUpdate();
+                    setEditing(false);
                 }}
             />
         </td>
